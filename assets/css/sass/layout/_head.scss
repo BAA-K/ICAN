@@ -1,0 +1,140 @@
+header {
+  height: 82px;
+  .header-content {
+    background-color: var(--c-mode);
+    box-shadow: 1px 1px 15px 0 var(--c-shadow-mode),
+      0 -2px 15px 2px inset var(--c-transparent-main);
+    height: 82px;
+
+    position: fixed;
+    @include set-position(0, 0, auto, 0);
+    z-index: 990;
+
+    .navbar {
+      .logo {
+        img {
+          width: 65px;
+          @include filter(drop-shadow(0 2px 4px var(--c-reverse)));
+        }
+      }
+
+      .links-holder {
+        padding: 0;
+        position: fixed;
+        @include set-position(auto, 50px, 75px, auto);
+        @include breakpoints(lg) {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 25px;
+          position: relative;
+          @include set-position(auto, auto, auto, auto);
+        }
+
+        font-size: 16px;
+        font-weight: 500;
+
+        li {
+          @include breakpoints(lg) {
+            position: relative;
+            z-index: 600;
+          }
+          &.active {
+            a {
+              color: var(--c-reverse);
+            }
+
+            & ~ .indexer {
+              @include opacity(1);
+            }
+
+            &:nth-child(2) ~ .indexer {
+              left: -2px;
+              width: 50px;
+            }
+
+            &:nth-child(3) ~ .indexer {
+              width: 70px;
+              left: 66px;
+            }
+
+            &:nth-child(4) ~ .indexer {
+              width: 70px;
+              left: 160px;
+            }
+
+            &:nth-child(5) ~ .indexer {
+              width: 55px;
+              left: 250px;
+            }
+
+            &:nth-child(6) ~ .indexer {
+              width: 55px;
+              left: 317px;
+            }
+
+            &:nth-child(7) ~ .indexer {
+              width: 80px;
+              left: 385px;
+            }
+
+            &:nth-child(8) ~ .indexer {
+              width: 90px;
+              left: 486px;
+            }
+          }
+
+          &:hover {
+            a {
+              color: var(--c-main);
+            }
+          }
+
+          svg {
+            display: block;
+            color: var(--c-main);
+            @include breakpoints(lg) {
+              display: none;
+            }
+          }
+        }
+
+        .links-btn {
+          @include breakpoints(lg) {
+            display: none;
+          }
+        }
+
+        .indexer {
+          background-color: #e1d18936;
+          height: 35px;
+          @include prefixer(border-radius, 20px);
+          box-shadow: 0 0 8px var(--c-transparent-main),
+            0 0 8px var(--c-transparent-main),
+            0 0 15px var(--c-transparent-main) inset;
+          position: absolute;
+          left: -1;
+          z-index: 1;
+          @include opacity(0);
+        }
+      }
+
+      .search {
+        width: 100%;
+        position: relative;
+
+        svg {
+          position: absolute;
+          right: 20px;
+          @include center-y;
+          color: #777;
+        }
+
+        input:focus ~ svg {
+          color: var(--c-main);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Render All Elements Noramlly -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="./vendor/icons/CSS/all.min.css" />
+    <!-- Bootstrap Framework -->
+    <link rel="stylesheet" href="./vendor/bootstrap/CSS/bootstrap.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaini&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Main Template Css File -->
+    <link rel="stylesheet" href="./assets/css/avatar.css" />
+    <!-- Set Icon -->
+    <link rel="icon" href="./assets/images/logo.png" type="image/x-icon" />
+    <title>Ican</title>
+  </head>
+
+  <body>
+    <!-- Start Loading -->
+    <div id="loading">
+      <div class="center">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- End Loading -->
+
+    <!-- Start Header -->
+    <header>
+      <div class="header-content">
+        <div class="container h-100">
+          <nav class="navbar navbar-expand-md h-100 position-static">
+            <div class="container-fluid flex-nowrap">
+              <div class="logo me-lg-5">
+                <img src="./assets/images/logo.png" alt="logo" />
+              </div>
+
+              <ul class="links-holder">
+                <li class="links-btn my-circle active">
+                  <i class="fa-solid fa-bars"></i>
+                </li>
+
+                <li
+                  style="--rotate: 2.5"
+                  class="my-circle active"
+                  data-distance="long"
+                >
+                  <a href="#hero">Home</a>
+                  <i class="fa-solid fa-house"></i>
+                </li>
+
+                <li style="--rotate: 2" class="my-circle" data-distance="near">
+                  <a href="#services">Services</a>
+                  <i class="fa-solid fa-briefcase"></i>
+                </li>
+
+                <li style="--rotate: 3" class="my-circle" data-distance="near">
+                  <a href="#features">Features</a>
+                  <i class="fa-solid fa-star"></i>
+                </li>
+
+                <li style="--rotate: 4" class="my-circle" data-distance="near">
+                  <a href="#hiring">Hiring</a>
+                  <i class="fa-solid fa-clipboard-list"></i>
+                </li>
+
+                <li style="--rotate: 5" class="my-circle" data-distance="near">
+                  <a href="#team">Team</a>
+                  <i class="fa-solid fa-user-group"></i>
+                </li>
+
+                <li
+                  style="--rotate: 3.5"
+                  class="my-circle"
+                  data-distance="long"
+                >
+                  <a href="#about">About Us</a>
+                  <i class="fa-solid fa-question"></i>
+                </li>
+
+                <li
+                  style="--rotate: 4.5"
+                  class="my-circle"
+                  data-distance="long"
+                >
+                  <a href="#contact">Contact Us</a>
+                  <i class="fa-solid fa-phone"></i>
+                </li>
+
+                <div class="indexer d-none d-lg-block"></div>
+              </ul>
+
+              <div class="search me-2 ms-4">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search"
+                />
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Hero -->
+    <section id="hero">
+      <div class="star-background"></div>
+
+      <div class="container h-100">
+        <div class="row">
+          <div class="col-lg-6 col-12 text-lg-start text-center">
+            <h1 class="reverse-text title" ani="bottom">
+              <span class="primary-text">I</span>Can Company
+            </h1>
+
+            <p class="subtitle" ani="right">
+              For consulting, software and technical solutions and everything
+              related to information and communication technology.
+            </p>
+
+            <button type="button" class="my-btn" ani="up">
+              <a href="#contact">Contact Us</a>
+            </button>
+            <button type="button" class="ms-2 my-btn" ani="up">
+              <a href="#hiring">Join Us</a>
+            </button>
+          </div>
+
+          <div
+            class="col-lg-6 d-lg-flex d-none justify-content-center align-items-center"
+            ani="left-big"
+          >
+            <img src="./assets/images/logo.png" alt="logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Start Servicer -->
+    <section id="services">
+      <div class="pump-services-background"></div>
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>Services</h2>
+          <p>Check Our Services</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/windows.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">
+                  Window <br />
+                  Development
+                </h3>
+              </div>
+
+              <div class="content">
+                <h3>Windows</h3>
+                <p>
+                  Developing programs and systems that run on the Windows system
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/android.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">
+                  Android <br />Development
+                </h3>
+              </div>
+
+              <div class="content">
+                <h3>Android</h3>
+                <p>
+                  Developing programs and systems that run on the Android system
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/ios.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">IOS <br />Development</h3>
+              </div>
+
+              <div class="content">
+                <h3>IOS</h3>
+                <p>
+                  Developing programs and systems that run on the IOS system
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/web.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">Web <br />Development</h3>
+              </div>
+
+              <div class="content">
+                <h3>Web</h3>
+                <p>
+                  Developing programs and systems that run over the Web system
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/uiux.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">
+                  UI/UX <br />
+                  Design
+                </h3>
+              </div>
+
+              <div class="content">
+                <h3>UI/ UX</h3>
+                <p>
+                  Create and design visual identities, logos, personal cards,
+                  official documents and an electronic invoice and ...
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/montage.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">
+                  Montage <br />
+                  & <br />
+                  Video Editor <br />
+                  Design
+                </h3>
+              </div>
+
+              <div class="content">
+                <h3>Video Editor</h3>
+                <p>
+                  Create promotional and advertising introductory digital videos
+                  and create animated graphic videos and ...
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/marktering.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">Digital Marketing</h3>
+              </div>
+
+              <div class="content">
+                <h3>Digital Marketing</h3>
+                <p>
+                  Create digital marketing campaigns in all ways via e-mail,
+                  content and social media ...
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/software.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">Software</h3>
+              </div>
+
+              <div class="content">
+                <h3>Software</h3>
+                <p>
+                  Technical support and software for all electronic devices from
+                  mobiles to laptops to tablets in addition to routers and
+                  networks.
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6 col-12" ani="big">
+            <div class="service">
+              <div class="poster">
+                <img src="./assets/images/projects.png" alt="service" />
+                <h3 class="mt-3 primary-text fs-1">Projects</h3>
+              </div>
+
+              <div class="content">
+                <h3>Projects</h3>
+                <p>
+                  A special section for graduation projects for students of
+                  Informatics Engineering / ...etc and ...
+                </p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Servicer -->
+
+    <!-- Start Features -->
+    <section id="features">
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>Features</h2>
+          <p>Check Our Features</p>
+        </div>
+
+        <div class="row align-items-stretch g-2">
+          <div class="col-lg-3 col-md-6 col-12" ani="right">
+            <div class="card">
+              <span></span>
+              <div class="card-body">
+                <i class="fa-solid fa-gauge-high primary-text fs-2 mb-2"></i>
+                <h3 class="reverse-text fw-bold fs-2">Fast</h3>
+                <p class="reverse-text fs">
+                  Delivering the project as soon as possible is the basis of our
+                  policy with customers
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" ani="bottom">
+            <div class="card">
+              <span></span>
+              <div class="card-body">
+                <i class="fa-solid fa-ranking-star primary-text fs-2 mb-2"></i>
+                <h3 class="reverse-text fw-bold fs-2">Creative</h3>
+                <p class="reverse-text">New and unique designs and works</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" ani="up">
+            <div class="card">
+              <span></span>
+              <div class="card-body">
+                <i class="fa-solid fa-gauge-high primary-text fs-2"></i>
+                <h3 class="reverse-text fw-bold fs-2">High Quality</h3>
+                <p class="reverse-text">
+                  Deliver the project in best performance and with advanced
+                  stuff.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" ani="left">
+            <div class="card">
+              <span></span>
+              <div class="card-body">
+                <i class="fa-solid fa-gauge-high primary-text fs-2"></i>
+                <h3 class="reverse-text fw-bold fs-2">Modern</h3>
+                <p class="reverse-text">
+                  Using most modern tools and libraries and design trend in your
+                  project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="container text-center" ani="bottom">
+          <p class="title">Under the supervision of Engineer Bassel</p>
+
+          <p class="offer-paragraph">
+            We are ready to design and program Windows programs, Android and
+            iPhone applications, in addition to websites to manage your work
+            smoothly, comfortably and completely, covering all the details of
+            the work and facilitating communication with customers
+            professionally according to distinctive and easy-to-use designs. We
+            are also ready for all graphic designs and montage work for the
+            success of your companies and the presentation of all your products
+            with accuracy and professionalism in order to sat
+          </p>
+
+          <a href="#contact">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Features -->
+
+    <!-- Start Hiring -->
+    <section id="hiring">
+      <div class="pump-hiring-background"></div>
+
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>Hiring</h2>
+          <p>Have Skills? Join Us</p>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12">
+            <p
+              class="title text-center text-lg-start fs-4 fw-bold"
+              ani="bottom"
+            >
+              What's required
+            </p>
+            <ul class="text-center text-lg-start ps-lg-5 p-0" ani="right">
+              <li>3 Years experian at least</li>
+              <li>5 projects at your field</li>
+              <li>CV</li>
+              <li>Senior</li>
+              <li>High quality work</li>
+            </ul>
+            <p
+              class="title text-center text-lg-start mt-2 fs-4 fw-bold"
+              ani="right"
+            >
+              Our tools:
+            </p>
+
+            <div
+              class="tools d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start"
+            >
+              <span ani="pump-badge" style="--color: #0078d7" class="badge"
+                >React</span
+              >
+              <span ani="pump-badge" style="--color: #075e54" class="badge"
+                >Vue</span
+              >
+              <span ani="pump-badge" style="--color: #e44436" class="badge"
+                >Angular</span
+              >
+              <span ani="pump-badge" style="--color: #37aef3" class="badge"
+                >.Net</span
+              >
+              <span ani="pump-badge" style="--color: #511378" class="badge"
+                >Nest</span
+              >
+              <span ani="pump-badge" style="--color: #f48924" class="badge"
+                >Java</span
+              >
+              <span ani="pump-badge" style="--color: #1877f2" class="badge"
+                >React Native</span
+              >
+              <span ani="pump-badge" style="--color: #be0027" class="badge"
+                >Kotlin</span
+              >
+              <span ani="pump-badge" style="--color: #005888" class="badge"
+                >Flutter</span
+              >
+              <span ani="pump-badge" style="--color: #ff0000" class="badge"
+                >Swift</span
+              >
+              <span ani="pump-badge" style="--color: #0ea0db" class="badge"
+                >Photoshop</span
+              >
+              <span ani="pump-badge" style="--color: #cf8d2e" class="badge"
+                >Render</span
+              >
+              <span ani="pump-badge" style="--color: #7ac143" class="badge"
+                >Matlab</span
+              >
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-flex d-none">
+            <img src="./assets//images/hand.png" alt="hiring" ani="left" />
+          </div>
+        </div>
+
+        <form class="row g-4 needs-validation mt-4" novalidate>
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="right">
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First name"
+                class="form-control"
+                required
+              />
+              <label for="firstname" class="floatingInput">First name</label>
+              <p class="invalid-tooltip">Filed is required!</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="right">
+              <input
+                type="text"
+                id="fathername"
+                placeholder="Father name"
+                class="form-control"
+                required
+              />
+              <label for="fathername" class="floatingInput">Father name</label>
+              <p class="invalid-tooltip">Filed is required!</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="left">
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last name"
+                class="form-control"
+                required
+              />
+              <label for="lastname" class="floatingInput">Last Name</label>
+              <p class="invalid-tooltip">Filed is required!</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="left">
+              <select id="gender" required class="form-select">
+                <option disabled selected value>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <label for="gender">Gender</label>
+              <p class="invalid-tooltip">gender is required!</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="right">
+              <select disabled id="military" class="form-select">
+                <option disabled selected value>Military situation</option>
+                <option value="serves">Serves</option>
+                <option value="theatre">Theatre</option>
+                <option value="deferred">Deferred</option>
+              </select>
+              <label for="military">Status</label>
+              <p class="invalid-tooltip">Military situation is required!</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="right">
+              <select id="marital" class="form-select">
+                <option disabled selected value>Select Gender</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+              </select>
+              <label for="marital">Marital status</label>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="left">
+              <input
+                required
+                id="date"
+                type="date"
+                placeholder="Your birth day"
+                class="form-control"
+              />
+              <label for="date">Your birth day</label>
+              <p class="invalid-tooltip">Birth is required</p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="form-floating" ani="left">
+              <input
+                required
+                type="file"
+                id="file"
+                placeholder="Your birth day"
+                class="form-control"
+                accept=".pdf,.doc,.docx"
+              />
+              <label for="file">CV</label>
+              <p class="invalid-tooltip">Birth is required</p>
+            </div>
+          </div>
+
+          <div class="w-auto mx-auto mt-5" ani="up">
+            <button class="my-btn" id="submit-btn" type="submit">
+              Join Us
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End Hiring -->
+
+    <!-- Start Team -->
+    <section id="team">
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>Team</h2>
+          <p>Check out our team</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card position-relative overflow-hidden">
+              <img src="./assets/images/person.jpg" alt="avatar" />
+              <div class="info">
+                <p class="m-0">Mr. Bassel Tnbakji</p>
+              </div>
+              <div class="contacts">
+                <a
+                  style="--color: #1877f2"
+                  href="https://www.facebook.com/profile.php?id=61554375011119&mibextid=hIlR13"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  style="--color: #004182"
+                  href="https://www.linkedin.com/in/ican-aleppo"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  style="--color: #25d366"
+                  href="https://whatsapp.com/channel/0029VaGsTWj6rsQprCXMu00F"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  style="--color: #0088cc"
+                  href="https://t.me/+8ieZrxCO-0w4M2Jh"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <a
+                  style="--color: #fcaf45"
+                  href="https://www.instagram.com/ican.aleppo?igshid=MmVlMjlkMTBhMg=="
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card position-relative overflow-hidden">
+              <img src="./assets/images/person.jpg" alt="avatar" />
+              <div class="info">
+                <p class="m-0">Mr. Bassel Tnbakji</p>
+              </div>
+              <div class="contacts">
+                <a
+                  style="--color: #1877f2"
+                  href="https://www.facebook.com/profile.php?id=61554375011119&mibextid=hIlR13"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  style="--color: #004182"
+                  href="https://www.linkedin.com/in/ican-aleppo"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  style="--color: #25d366"
+                  href="https://whatsapp.com/channel/0029VaGsTWj6rsQprCXMu00F"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  style="--color: #0088cc"
+                  href="https://t.me/+8ieZrxCO-0w4M2Jh"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <a
+                  style="--color: #fcaf45"
+                  href="https://www.instagram.com/ican.aleppo?igshid=MmVlMjlkMTBhMg=="
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12">
+            <div class="card position-relative overflow-hidden">
+              <img src="./assets/images/person.jpg" alt="avatar" />
+              <div class="info">
+                <p class="m-0">Mr. Bassel Tnbakji</p>
+              </div>
+              <div class="contacts">
+                <a
+                  style="--color: #1877f2"
+                  href="https://www.facebook.com/profile.php?id=61554375011119&mibextid=hIlR13"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  style="--color: #004182"
+                  href="https://www.linkedin.com/in/ican-aleppo"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a
+                  style="--color: #25d366"
+                  href="https://whatsapp.com/channel/0029VaGsTWj6rsQprCXMu00F"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  style="--color: #0088cc"
+                  href="https://t.me/+8ieZrxCO-0w4M2Jh"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                </a>
+                <a
+                  style="--color: #fcaf45"
+                  href="https://www.instagram.com/ican.aleppo?igshid=MmVlMjlkMTBhMg=="
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team -->
+
+    <!-- Start About Us -->
+    <section id="about">
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>About Us</h2>
+          <p>What Do You Know About Us?</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-lg-6 col-12 order-last order-lg-0">
+            <h1 ani="bottom">
+              We are making <br />
+              <span class="primary-text">future</span>
+            </h1>
+            <p ani="right">
+              Welcome to <span>Ican</span>! We specialize in providing
+              exceptional solutions for all your technological needs. With
+              expertise in Android app development, desktop app development, web
+              app development, graphic design, UI/UX design, marketing, and
+              montage, we are your one-stop destination for transforming your
+              ideas into reality. At our company, we believe in the power of
+              innovation and creativity. Our team of skilled professionals is
+              dedicated to delivering cutting-edge solutions that exceed client
+              expectations. Whether you require a sleek and intuitive mobile
+              app, a robust desktop application, a visually stunning website,
+              captivating graphic designs, user-friendly UI/UX interfaces, or
+              effective marketing strategies, we have got you covered.
+            </p>
+          </div>
+
+          <div
+            class="col-lg-6 col-12 d-flex justify-content-center align-items-center"
+            ani="left"
+          >
+            <img
+              src="./assets/images/about.png"
+              alt="about"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Us -->
+
+    <!-- Start Contact Us -->
+    <section id="contact">
+      <div class="container">
+        <div class="main-heading" ani="bottom">
+          <h2>Contact Us</h2>
+          <p>Ready To Answer Your Questions?</p>
+        </div>
+        <div
+          class="row align-items-center justify-content-lg-between justify-content-center"
+        >
+          <div class="col-lg-6 col-12 row g-3">
+            <div class="col-sm-6 col-12" ani="bottom">
+              <div class="card">
+                <div class="face face-1">
+                  <div class="content">
+                    <div class="icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h1>Address</h1>
+                  </div>
+                </div>
+                <div class="face face-2">
+                  <div class="content">
+                    <p>Syria, Aleppo</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-12" ani="bottom">
+              <div class="card">
+                <div class="face face-1">
+                  <div class="content">
+                    <div class="icon">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h1>Website</h1>
+                  </div>
+                </div>
+                <div class="face face-2">
+                  <div class="content">
+                    <a href="www.icanaleppo.com">www.icanaleppo.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-12" ani="right">
+              <div class="card">
+                <div class="face face-1">
+                  <div class="content">
+                    <div class="icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h1>Mobile Number</h1>
+                  </div>
+                </div>
+                <div class="face face-2">
+                  <div class="content">
+                    <p>+963 999 136 824</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-12" ani="left">
+              <div class="card">
+                <div class="face face-1">
+                  <div class="content">
+                    <div class="icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h1>Mail</h1>
+                  </div>
+                </div>
+                <div class="face face-2">
+                  <div class="content">
+                    <a href="ican.aleppo@gmail.com">ican.aleppo@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12" ani="up">
+              <div class="card">
+                <div class="face face-1">
+                  <div class="content">
+                    <div class="icon">
+                      <i class="fa-solid fa-share-nodes"></i>
+                    </div>
+                    <h1>Social Media</h1>
+                  </div>
+                </div>
+                <div class="face face-2">
+                  <div class="content">
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-3"
+                    >
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61554822892511&mibextid=vk8aRt"
+                        class="icon"
+                        style="--c-hover: #1877f2"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+
+                      <a
+                        href="https://www.instagram.com/ican.aleppo?igshid=MmVlMjlkMTBhMg=="
+                        class="icon"
+                        style="--c-hover: #fcaf45"
+                      >
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+
+                      <a
+                        href="https://t.me/+8ieZrxCO-0w4M2Jh"
+                        class="icon"
+                        style="--c-hover: #0088cc"
+                      >
+                        <i class="fa-regular fa-paper-plane"></i>
+                      </a>
+
+                      <a
+                        href="https://whatsapp.com/channel/0029VaGsTWj6rsQprCXMu00F"
+                        class="icon"
+                        style="--c-hover: #25d366"
+                      >
+                        <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+
+                      <a
+                        href="https://www.linkedin.com/company/ican-aleppo/"
+                        class="icon"
+                        style="--c-hover: #004182"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+
+                      <a
+                        href="https://www.youtube.com/@icanaleppo"
+                        class="icon"
+                        style="--c-hover: #ff0000"
+                      >
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-12 message">
+            <h1 ani="bottom">Send a message</h1>
+
+            <p ani="bottom">
+              You can express your opinion or express your question through a
+              message:
+            </p>
+
+            <form class="row g-3 needs-validation-message">
+              <div class="col-sm-6 col-12 position-relative">
+                <input
+                  type="text"
+                  required
+                  class="form-control"
+                  placeholder="First name"
+                  ani="right"
+                />
+                <div class="invalid-tooltip">First name is required</div>
+              </div>
+
+              <div class="col-sm-6 col-12 position-relative">
+                <input
+                  type="text"
+                  required
+                  class="form-control"
+                  placeholder="Last name"
+                  ani="left"
+                />
+                <div class="invalid-tooltip">Last name is required</div>
+              </div>
+
+              <div class="col-12 position-relative">
+                <input
+                  type="text"
+                  required
+                  class="form-control"
+                  placeholder="Subject"
+                  ani="left"
+                />
+                <div class="invalid-tooltip">Subject name is required</div>
+              </div>
+
+              <div class="col-12 position-relative">
+                <textarea
+                  placeholder="Message"
+                  required
+                  class="form-control"
+                  style="height: 225px"
+                  ani="right"
+                ></textarea>
+                <div class="invalid-tooltip">Message name is required</div>
+              </div>
+
+              <div class="w-auto mx-auto mt-4" ani="up">
+                <button type="submit" class="my-btn" id="message-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Us -->
+
+    <!-- Start Footer -->
+    <footer id="footer">
+      <h1><span>I</span>CAN Company</h1>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="light-togger">
+      <i class="fa-regular fa-lightbulb light-togger-icon"></i>
+    </div>
+
+    <!-- Swiper Library Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Script Font Awesome Library -->
+    <script src="./vendor/icons/JS/all.min.js"></script>
+    <!-- Script Bootstrap Framework -->
+    <script src="./vendor/bootstrap/JS/bootstrap.min.js"></script>
+    <!-- Script VanillaTilt Library -->
+    <script src="./assets/js/vanillaTile.js" type="text/javascript"></script>
+    <!-- Script Main Template -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

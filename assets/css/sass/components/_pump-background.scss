@@ -1,0 +1,12 @@
+.pump {
+  color: var(--c-main);
+  position: absolute;
+  top: -60px;
+  @include animation(pump, .3s linear infinite);
+  &::before {
+    content: "\f5d2";
+    font-family: fontAwesome;
+    text-shadow: 0 0 5px var(--c-main), 0 0 20px var(--c-main),
+      0 0 50px var(--c-main);
+  }
+}

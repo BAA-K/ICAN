@@ -1,0 +1,25 @@
+/* Helpers */
+@import "./sass/helpers/_variables";
+@import "./sass/helpers/_mixins";
+@import "./sass/helpers/animations";
+
+/* Global */
+@import "./sass/pages/global-rules";
+
+/* Components */
+@import "./sass/components/light-togger";
+@import "./sass/components/header-links";
+@import "./sass/components/star-background";
+@import "./sass/components/main-heading";
+@import "./sass/components/my-btn";
+@import "./sass/components/pump-background";
+
+/* Layout */
+@import "./sass/layout/loading";
+@import "./sass/layout/head";
+
+/* Pages */
+@import "./sass/pages/homepage";
+
+/* Layout */
+@import "./sass/layout/footer";

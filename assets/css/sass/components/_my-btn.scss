@@ -1,0 +1,35 @@
+.my-btn {
+  background-color: var(--c-main);
+  padding: 5px 18px;
+  border: none;
+  @include prefixer(border-radius, 6px);
+  box-shadow: 0 0 15px var(--c-dark-main), 0 0 30px var(--c-dark-main),
+    0 0 50px var(--c-dark-main), 0 0 80px transparent,
+    0 0 12px var(--c-dark-main) inset, 0 0 25px var(--c-transparent-main) inset;
+  position: relative;
+  overflow: hidden;
+  color: var(--c-mode);
+
+  &::after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.289);
+    width: 8px;
+    box-shadow: 0 0 15px #eee, 0 0 30px #eee;
+    position: absolute;
+    @include set-position(-3px, -15px, -3px, auto);
+    @include prefixer(transform, rotate(15deg));
+    @include animation(lighting-btn, 6s linear infinite);
+  }
+
+  a {
+    font-size: 22px;
+    color: inherit;
+  }
+
+  &:hover {
+    box-shadow: 0 0 15px var(--c-dark-main), 0 0 30px var(--c-main),
+      0 0 50px var(--c-dark-main), 0 0 80px var(--c-main),
+      0 0 12px var(--c-dark-main) inset,
+      0 0 25px var(--c-transparent-main) inset;
+  }
+}

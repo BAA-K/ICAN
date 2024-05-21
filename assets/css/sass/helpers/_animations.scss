@@ -1,0 +1,238 @@
+@include keyf("up") {
+  from {
+    @include prefixer(transform, translateY(200px));
+  }
+  to {
+    @include prefixer(transform, translateY(0));
+    @include opacity(1);
+  }
+}
+@include keyf("bottom") {
+  from {
+    @include prefixer(transform, translateY(-200px));
+  }
+  to {
+    @include prefixer(transform, translateY(0));
+    @include opacity(1);
+  }
+}
+@include keyf("up-big") {
+  from {
+    @include prefixer(transform, translateY(200px) scale(0));
+  }
+  to {
+    @include prefixer(transform, translateY(0) scale(1));
+    @include opacity(1);
+  }
+}
+@include keyf("big") {
+  from {
+    @include prefixer(transform, scale(0));
+  }
+  to {
+    @include prefixer(transform, scale(1));
+    @include opacity(1);
+  }
+}
+@include keyf("right") {
+  from {
+    @include prefixer(transform, translateX(-200px));
+  }
+  to {
+    @include prefixer(transform, translateX(0));
+    @include opacity(1);
+  }
+}
+@include keyf("left") {
+  from {
+    @include prefixer(transform, translateX(+200px));
+  }
+  to {
+    @include prefixer(transform, translateX(0));
+    @include opacity(1);
+  }
+}
+@include keyf("right-big") {
+  from {
+    @include prefixer(transform, translateX(-200px) scale(0));
+  }
+  to {
+    @include prefixer(transform, translateX(0) scale(1));
+    @include opacity(1);
+  }
+}
+@include keyf("left-big") {
+  from {
+    @include prefixer(transform, translateX(+200px) scale(0));
+  }
+  to {
+    @include prefixer(transform, translateX(0) scale(1));
+    @include opacity(1);
+  }
+}
+@include keyf("load-1") {
+  from {
+    @include prefixer(transform, rotateY(0deg) rotateX(-120deg) rotateZ(0));
+  }
+  to {
+    @include prefixer(transform, rotateY(0deg) rotateX(-120deg) rotateZ(360deg));
+  }
+}
+@include keyf("load-2") {
+  from {
+    @include prefixer(transform, rotateY(120deg) rotateX(0deg) rotateZ(0));
+  }
+  to {
+    @include prefixer(transform, rotateY(120deg) rotateX(0deg) rotateZ(360deg));
+  }
+}
+@include keyf("load-3") {
+  from {
+    @include prefixer(transform, rotateY(-60deg) rotateX(-50deg) rotateZ(0));
+  }
+  to {
+    @include prefixer(transform, rotateY(-60deg) rotateX(-50deg) rotateZ(360deg));
+  }
+}
+
+@include keyf("falling") {
+  0% {
+    @include prefixer(transform, translateY(0) rotate(0deg));
+    @include opacity(1);
+  }
+  80% {
+    @include opacity(1);
+  }
+  100% {
+    @include prefixer(transform, translateY(100vh) rotate(360deg));
+    @include opacity(0);
+  }
+}
+
+@include keyf("lighting-btn") {
+  0% {
+    right: -15px;
+  }
+  20%,
+  100% {
+    right: calc(100% + 15px);
+  }
+}
+
+@include keyf("floating-z") {
+  0% {
+    @include prefixer(transform, translateY(0px) rotateY(0) rotateZ(0));
+  }
+  20% {
+    @include prefixer(transform, translateY(5px) rotateY(5deg) rotateZ(1deg));
+  }
+  40% {
+    @include prefixer(transform, translateY(15px) rotateY(0deg) rotateZ(1deg));
+  }
+  60% {
+    @include prefixer(transform, translateY(-5px) rotateY(5deg) rotateZ(-1deg));
+  }
+  80% {
+    @include prefixer(
+      transform,
+      translateY(-15px) rotateY(2deg) rotateZ(-1deg)
+    );
+  }
+  100% {
+    @include prefixer(transform, translateY(0) rotateY(0) rotateZ(0));
+  }
+}
+
+@include keyf("floating") {
+  0% {
+    @include prefixer(transform, translateY(0));
+  }
+  20% {
+    @include prefixer(transform, translateY(25px));
+  }
+  40% {
+    @include prefixer(transform, translateY(10px));
+  }
+  60% {
+    @include prefixer(transform, translateY(-10px));
+  }
+  80% {
+    @include prefixer(transform, translateY(-25px));
+  }
+  100% {
+    @include prefixer(transform, translateY(0));
+  }
+}
+
+@include keyf("pump") {
+  0% {
+    @include prefixer(transform, scale(0));
+    @include opacity(1);
+  }
+  35% {
+    @include prefixer(transform, scale(1));
+    @include opacity(1);
+  }
+  70% {
+    @include prefixer(transform, scale(1.1));
+    @include opacity(1);
+  }
+  100% {
+    @include prefixer(transform, scale(0));
+    @include opacity(0);
+  }
+}
+
+@include keyf("pump-badge") {
+  0% {
+    @include prefixer(transform, scale(0) rotate(0));
+  }
+  10% {
+    @include prefixer(transform, scale(0.1) rotate(6deg));
+    @include opacity(0.1);
+  }
+  20% {
+    @include prefixer(transform, scale(0.2) rotate(-6deg));
+    @include opacity(0.2);
+  }
+  30% {
+    @include prefixer(transform, scale(0.3) rotate(6deg));
+    @include opacity(0.3);
+  }
+  40% {
+    @include prefixer(transform, scale(0.4) rotate(-6deg));
+    @include opacity(0.4);
+  }
+  50% {
+    @include prefixer(transform, scale(0.5) rotate(6deg));
+    @include opacity(0.5);
+  }
+  60% {
+    @include prefixer(transform, scale(0.6) rotate(-6deg));
+    @include opacity(0.6);
+  }
+  50% {
+    @include prefixer(transform, scale(0.6) rotate(6deg));
+    @include opacity(0.5);
+  }
+  60% {
+    @include prefixer(transform, scale(0.7) rotate(-6deg));
+    @include opacity(0.6);
+  }
+  70% {
+    @include prefixer(transform, scale(0.9) rotate(6deg));
+    @include opacity(0.7);
+  }
+  80% {
+    @include prefixer(transform, scale(1) rotate(-6deg));
+    @include opacity(0.8);
+  }
+  90% {
+    @include prefixer(transform, scale(1.2) rotate(6deg));
+    @include opacity(0.9);
+  }
+  100% {
+    @include prefixer(transform, scale(1) rotate(0));
+    @include opacity(1);
+  }
+}

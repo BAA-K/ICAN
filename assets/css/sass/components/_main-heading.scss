@@ -1,0 +1,25 @@
+.main-heading {
+  text-transform: uppercase;
+  h2 {
+    width: fit-content;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 22px;
+    color: #aaaaaa;
+    &:after {
+      content: "";
+      background-color: var(--c-main);
+      width: 150px;
+      height: 1px;
+      position: absolute;
+      right: -160px;
+      @include center-y;
+    }
+  }
+  p {
+    font-weight: bold;
+    font-size: 35px;
+    color: var(--c-reverse);
+  }
+}

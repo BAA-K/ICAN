@@ -1,0 +1,20 @@
+$xs: "(max-width: 575.9px)";
+$sm: "(min-width: 576px)";
+$md: "(min-width: 768px)";
+$lg: "(min-width: 992px)";
+$xl: "(min-width: 1200px)";
+$xxl: "(min-width: 1400px)";
+
+$max-lg: "(max-width: 992px)";
+:root {
+  --time-transition: 0.3s;
+  --c-main: #fdcd01;
+  --c-transparent-main: #e1d18999;
+  --c-dark-main: #856c00;
+  --c-mode: #f0eded;
+  --c-shadow-mode: #c4c4c3;
+  --c-shadow-reverse: #1a1616;
+  --c-reverse: #000;
+  --c-bg-main: #ffffff;
+  --c-grey-text: #626262;
+}

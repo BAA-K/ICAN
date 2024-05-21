@@ -1,0 +1,25 @@
+.light-togger {
+  background-color: var(--c-mode);
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  @include prefixer(border-radius, 50%);
+  box-shadow: 0 1px 1px var(--c-shadow-mode);
+  @include centering;
+  position: fixed;
+  @include set-position(125px, 30px, auto, auto);
+  color: var(--c-main);
+  cursor: pointer;
+  z-index: 998;
+
+  &:hover {
+    box-shadow: 0 1px 1px var(--c-shadow-mode),
+      0 0 6px 0 var(--c-transparent-main) inset;
+    svg {
+      @include prefixer(
+        transform,
+        translateY(3px) rotate(calc(360deg / 10 * var(--rotate)))
+      );
+    }
+  }
+}
