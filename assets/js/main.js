@@ -1,15 +1,13 @@
 /*  Variables  */
 const linkBtn = document.querySelector(".links-btn");
-const linksNav = document.querySelectorAll(".my-circle:not(.links-btn)");
-const lightTogger = document.querySelector(".light-togger");
+const navLinks = document.querySelectorAll(".my-circle:not(.links-btn)");
+const lightToggler = document.querySelector(".light-togger");
 const backgroundStar = document.querySelector(".star-background");
 const aniElement = document.querySelectorAll("*[ani]");
-const windowHeight = this.innerHeight;
-const lastSection = document.getElementById("footer");
 const submitJoinBtn = document.getElementById("submit-btn");
-const formJoin = document.querySelector(".needs-validation");
+const joinForm = document.querySelector(".needs-validation");
 const submitMessageBtn = document.getElementById("message-btn");
-const formMessage = document.querySelector(".needs-validation-message");
+const messageForm = document.querySelector(".needs-validation-message");
 const genderInput = document.getElementById("gender");
 const militaryInput = document.getElementById("military");
 const serviceBackground = document.querySelector(".pump-services-background");
@@ -17,8 +15,10 @@ const hiringBackground = document.querySelector(".pump-hiring-background");
 const loadingPage = document.getElementById("loading");
 const pageSections = document.querySelectorAll("section");
 
+const windowHeight = window.innerHeight;
+const windowWidth = window.innerWidth;
+
 let isLight = true;
-let isReachToEnd = false;
 
 const lightMode = "#f0eded";
 const darkMode = "#000";
@@ -36,8 +36,8 @@ const stars = (background, className, left, top, killer, defaultSize = 12) => {
   let duration = Math.random() * 3 + 0.5;
 
   element.setAttribute("class", className);
-  if (left) element.style.left = Math.random() * +innerWidth + "px";
-  if (top) element.style.top = Math.random() * +innerHeight + "px";
+  if (left) element.style.left = Math.random() * +windowWidth + "px";
+  if (top) element.style.top = Math.random() * +windowHeight + "px";
   element.style.fontSize = defaultSize + size + "px";
   element.style.animationDuration = 2 * duration + "s";
 
@@ -48,53 +48,66 @@ const stars = (background, className, left, top, killer, defaultSize = 12) => {
   }, killer);
 };
 
-//  Function to switch the active class
-const switchClassLinks = (links, href) => {
-  links.forEach((link) => {
-    link.classList.remove("active");
+//  To check if the section is in the viewport
+const highlightActiveLink = () => {
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+      const sectionID = section.id;
+      const activeLink = document.querySelector(`nav a[href="#${sectionID}"]`);
+      navLinks.forEach((link) => link.classList.remove("active"));
+      activeLink.parentElement.classList.add("active");
+    }
   });
-  document
-    .querySelector(`.navbar a[href="#${href}"]`)
-    .parentElement.classList.add("active");
 };
 
-const bReachSection = (element, window) => {
-  var elementOffsetTop = element.offsetTop,
-    elementOuterHeight = element.offsetHeight,
-    windowScollTop = this.pageYOffset;
-  return windowScollTop >= elementOffsetTop + elementOuterHeight - window * 1.5
-    ? true
-    : false;
-};
+// Set the animation when it viewed in the screen
+const setAnimation = () => {
+  const reveals = document.querySelectorAll("*[ani]");
+  reveals.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    if (elementTop < windowHeight) {
+      element.style.animation = `${element.getAttribute(
+        "ani"
+      )} 1s .3s linear forwards`;
 
-const setAnimation = (aniElement, lastSection, windowHeight) => {
-  if (isReachToEnd) {
-    return;
-  }
-  isReachToEnd = bReachSection(lastSection, windowHeight) ? true : false;
-  aniElement.forEach((e) => {
-    if (bReachSection(e, windowHeight)) {
-      e.style.animation = `${e.getAttribute("ani")} 1s .3s linear forwards`;
+      setTimeout(() => {
+        element.removeAttribute("ani");
+      }, 500);
     }
   });
 };
 
 /*  Main  */
 
+window.onload = () => {
+  setAnimation();
+
+  // To remove loading animation when it loaded
+  loadingPage.classList.add("loaded");
+  // Set the overflow-y of body auto instead of hidden
+  document.body.style.overflowY = "auto";
+};
+window.onscroll = () => {
+  setAnimation();
+  highlightActiveLink();
+};
+
 // To appear/disappear the links from sm to md screens
 linkBtn.onclick = () => linkBtn.classList.toggle("active");
 
 // To select the section in the page
-linksNav.forEach((e) => {
+navLinks.forEach((e) => {
   e.onclick = () => {
-    linksNav.forEach((e) => e.classList.remove("active"));
+    navLinks.forEach((e) => e.classList.remove("active"));
     e.classList.add("active");
     e.firstElementChild.click();
   };
 });
 
 // To switch between dark and light mode
-lightTogger.onclick = () => {
+lightToggler.onclick = () => {
   if (isLight) {
     document.documentElement.style.setProperty("--c-mode", darkMode);
     document.documentElement.style.setProperty("--c-reverse", lightMode);
@@ -117,33 +130,33 @@ lightTogger.onclick = () => {
 };
 
 // To control the form of join us
-submitJoinBtn.addEventListener("click", function (event) {
+submitJoinBtn.onclick = (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  if (formJoin.checkValidity() === false) {
-    formJoin.classList.add("was-validated");
+  if (joinForm.checkValidity() === false) {
+    joinForm.classList.add("was-validated");
   } else {
     submitJoinBtn.submit();
     location.reload();
   }
-});
+};
 
 // To control the form of message
-submitMessageBtn.addEventListener("click", function (event) {
+submitMessageBtn.onclick = (event) => {
   event.preventDefault();
   event.stopPropagation();
 
-  if (formMessage.checkValidity() === false) {
-    formMessage.classList.add("was-validated");
+  if (messageForm.checkValidity() === false) {
+    messageForm.classList.add("was-validated");
   } else {
-    formMessage.submit();
+    messageForm.submit();
     location.reload();
   }
-});
+};
 
 // Handle gender with military status
-genderInput.addEventListener("change", function () {
+genderInput.onchange = () => {
   var selectedValue = this.value;
   if (selectedValue === "male") {
     militaryInput.disabled = false;
@@ -152,23 +165,7 @@ genderInput.addEventListener("change", function () {
     militaryInput.disabled = true;
     militaryInput.required = false;
   }
-});
-
-window.onscroll = () => {
-  // To set animation when we reach to section
-  if (!isReachToEnd) {
-    setAnimation(aniElement, lastSection, windowHeight);
-  }
 };
-
-window.addEventListener("load", (_) => {
-  // To remove loading animation when it loaded
-  loadingPage.classList.add("loaded");
-  console.log(loadingPage);
-
-  // To set animation when the page loaded
-  setAnimation(aniElement, lastSection, windowHeight);
-});
 
 // Use vanillaTilt library
 VanillaTilt.init(document.querySelectorAll(".service"), {
@@ -185,42 +182,3 @@ setInterval(() => {
   stars(hiringBackground, "pump", true, true, 10000, 6);
 }, 500);
 
-//  To check if the section is in the viewport
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    // Check if the observed element is intersecting
-    if (entry.isIntersecting) {
-      var sectionID = entry.target.id;
-      switch (sectionID) {
-        case "hero":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "services":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "features":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "hiring":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "team":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "about":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        case "contact":
-          switchClassLinks(linksNav, sectionID);
-          break;
-        default:
-          break;
-      }
-    }
-  });
-});
-
-// watch the current viewport and set on the nav links
-Array.from(pageSections).forEach((section) => {
-  observer.observe(section);
-});

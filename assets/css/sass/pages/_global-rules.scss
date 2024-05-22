@@ -4,13 +4,14 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 82px;
+  scroll-padding-top: 32px;
 }
 body {
   font-family: "Work Sans", sans-serif;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden; /* We will reset it to auto after loading  */
 }
 ::-webkit-scrollbar {
   width: 12px;

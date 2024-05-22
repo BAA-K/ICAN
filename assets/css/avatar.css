@@ -517,7 +517,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 82px;
+  scroll-padding-top: 32px;
 }
 
 body {
@@ -525,6 +525,7 @@ body {
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden; /* We will reset it to auto after loading  */
 }
 
 ::-webkit-scrollbar {
@@ -1086,8 +1087,11 @@ header .header-content .navbar .search input:focus ~ svg {
 
 #hero {
   background-color: var(--c-bg-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 42px);
   position: relative;
-  height: calc(100vh - 40px);
   z-index: 989;
   overflow: hidden;
 }
