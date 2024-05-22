@@ -94,13 +94,16 @@ window.onscroll = () => {
 };
 
 // To appear/disappear the links from sm to md screens
-linkBtn.onclick = () => linkBtn.classList.toggle("active");
+linkBtn.addEventListener("click", (_) => {
+  linkBtn.classList.toggle("active");
+});
 
 // To select the section in the page
 navLinks.forEach((e) => {
   e.onclick = () => {
     navLinks.forEach((e) => e.classList.remove("active"));
     e.classList.add("active");
+    linkBtn.classList.remove("active");
     e.firstElementChild.click();
   };
 });

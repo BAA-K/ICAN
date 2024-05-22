@@ -54,6 +54,7 @@ textarea {
     border-color: var(--c-main);
     box-shadow: 0 0 0 0.25rem var(--c-transparent-main);
   }
+
 }
 textarea {
   resize: none;
@@ -89,4 +90,7 @@ section {
 }
 .reverse-text {
   color: var(--c-reverse);
+}
+.form-select:disabled {
+  background-color: #777;
 }
