@@ -2,7 +2,6 @@
 const linkBtn = document.querySelector(".links-btn");
 const navLinks = document.querySelectorAll(".my-circle:not(.links-btn)");
 const lightToggler = document.querySelector(".light-togger");
-const backgroundStar = document.querySelector(".star-background");
 const aniElement = document.querySelectorAll("*[ani]");
 const submitJoinBtn = document.getElementById("submit-btn");
 const joinForm = document.querySelector(".needs-validation");
@@ -175,7 +174,6 @@ VanillaTilt.init(document.querySelectorAll(".service"), {
 
 // To create star each second
 setInterval(() => {
-  stars(backgroundStar, "star", true, false, 5000);
   stars(serviceBackground, "pump", true, true, 10000, 6);
   stars(hiringBackground, "pump", true, true, 10000, 6);
 }, 500);

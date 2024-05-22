@@ -774,19 +774,6 @@ section {
   }
 }
 
-.star {
-  color: var(--c-main);
-  position: absolute;
-  top: -60px;
-  animation: falling 5s linear forwards;
-  -webkit-animation: falling 5s linear forwards;
-}
-.star::before {
-  content: "\f005";
-  font-family: fontAwesome;
-  text-shadow: 0 0 5px var(--c-main), 0 0 20px var(--c-main), 0 0 50px var(--c-main);
-}
-
 .main-heading {
   text-transform: uppercase;
 }
