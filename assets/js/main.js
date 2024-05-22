@@ -9,7 +9,6 @@ const submitMessageBtn = document.getElementById("message-btn");
 const messageForm = document.querySelector(".needs-validation-message");
 const genderInput = document.getElementById("gender");
 const militaryInput = document.getElementById("military");
-const serviceBackground = document.querySelector(".pump-services-background");
 const hiringBackground = document.querySelector(".pump-hiring-background");
 const loadingPage = document.getElementById("loading");
 const pageSections = document.querySelectorAll("section");
@@ -177,6 +176,5 @@ VanillaTilt.init(document.querySelectorAll(".service"), {
 
 // To create star each second
 setInterval(() => {
-  stars(serviceBackground, "pump", true, true, 10000, 6);
   stars(hiringBackground, "pump", true, true, 10000, 6);
 }, 500);
