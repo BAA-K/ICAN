@@ -470,6 +470,10 @@
           color: var(--c-reverse);
         }
 
+        .col-12 {
+          margin-bottom: 10px;
+        }
+
         input,
         textarea {
           border-color: var(--c-transparent-main);

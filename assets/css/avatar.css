@@ -1589,6 +1589,9 @@ header .header-content .navbar .search input:focus ~ svg {
   font-size: 18px;
   color: var(--c-reverse);
 }
+#contact .container > .row .message .col-12 {
+  margin-bottom: 10px;
+}
 #contact .container > .row .message input,
 #contact .container > .row .message textarea {
   border-color: var(--c-transparent-main);

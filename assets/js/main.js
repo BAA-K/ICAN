@@ -137,7 +137,6 @@ submitJoinBtn.onclick = (event) => {
   if (joinForm.checkValidity() === false) {
     joinForm.classList.add("was-validated");
   } else {
-    submitJoinBtn.submit();
     location.reload();
   }
 };
@@ -150,14 +149,13 @@ submitMessageBtn.onclick = (event) => {
   if (messageForm.checkValidity() === false) {
     messageForm.classList.add("was-validated");
   } else {
-    messageForm.submit();
     location.reload();
   }
 };
 
 // Handle gender with military status
-genderInput.onchange = () => {
-  var selectedValue = this.value;
+genderInput.addEventListener("change", (event) => {
+  var selectedValue = event.target.value;
   if (selectedValue === "male") {
     militaryInput.disabled = false;
     militaryInput.required = true;
@@ -165,7 +163,7 @@ genderInput.onchange = () => {
     militaryInput.disabled = true;
     militaryInput.required = false;
   }
-};
+});
 
 // Use vanillaTilt library
 VanillaTilt.init(document.querySelectorAll(".service"), {
@@ -181,4 +179,3 @@ setInterval(() => {
   stars(serviceBackground, "pump", true, true, 10000, 6);
   stars(hiringBackground, "pump", true, true, 10000, 6);
 }, 500);
-

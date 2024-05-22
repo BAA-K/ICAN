@@ -30,7 +30,7 @@
 
   <body>
     <!-- Start Loading -->
-    <div id="loading" class="loaded">
+    <div id="loading">
       <div class="center">
         <span></span>
         <span></span>
@@ -562,6 +562,7 @@
                 placeholder="First name"
                 class="form-control"
                 required
+                minlength="3"
               />
               <label for="firstname" class="floatingInput">First name</label>
               <p class="invalid-tooltip">Filed is required!</p>
@@ -576,6 +577,7 @@
                 placeholder="Father name"
                 class="form-control"
                 required
+                minlength="3"
               />
               <label for="fathername" class="floatingInput">Father name</label>
               <p class="invalid-tooltip">Filed is required!</p>
@@ -590,6 +592,7 @@
                 placeholder="Last name"
                 class="form-control"
                 required
+                minlength="3"
               />
               <label for="lastname" class="floatingInput">Last Name</label>
               <p class="invalid-tooltip">Filed is required!</p>
@@ -1051,6 +1054,8 @@
                   required
                   class="form-control"
                   placeholder="Subject"
+                  minlength="5"
+                  max="15"
                 />
                 <div class="invalid-tooltip">Subject name is required</div>
               </div>
@@ -1061,6 +1066,8 @@
                   required
                   class="form-control"
                   style="height: 225px"
+                  minlength="15"
+                  maxlength="500"
                 ></textarea>
                 <div class="invalid-tooltip">Message name is required</div>
               </div>
